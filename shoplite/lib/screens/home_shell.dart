@@ -5,9 +5,6 @@ import 'catalog_screen.dart';
 import 'home_screen.dart';
 import 'profile_screen.dart';
 
-/// Доод NavigationBar бүхий үндсэн бүтэц. IndexedStack нь таб солиход
-/// дэлгэц бүрийн төлөвийг (хайлтын текст, scroll) хадгална.
-/// Бонус 1: өргөн ≥ 900 үед доод NavigationBar-ын оронд зүүн талд NavigationRail.
 class HomeShell extends StatefulWidget {
   const HomeShell({
     super.key,

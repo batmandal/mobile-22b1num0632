@@ -5,8 +5,6 @@ import '../data/sample_products.dart';
 import '../models/product.dart';
 import '../widgets/product_card.dart';
 
-/// Каталог: хайлт, ангиллын шүүлтүүр, responsive grid.
-/// [products] — тестэд өөр жагсаалт өгөх боломжтой (анхдагч: sampleProducts).
 class CatalogScreen extends StatefulWidget {
   const CatalogScreen({super.key, this.products = sampleProducts});
 
@@ -17,11 +15,10 @@ class CatalogScreen extends StatefulWidget {
 }
 
 class _CatalogScreenState extends State<CatalogScreen> {
-  String? _category; // null → бүх ангилал ("Бүгд")
+  String? _category;
   String _query = '';
 
   void _openProduct(Product product) {
-    // 3-р лабд дэлгэрэнгүй дэлгэц рүү шилжинэ. Одоохондоо SnackBar.
     ScaffoldMessenger.of(context)
       ..hideCurrentSnackBar()
       ..showSnackBar(SnackBar(content: Text(product.title)));
@@ -39,7 +36,6 @@ class _CatalogScreenState extends State<CatalogScreen> {
       appBar: AppBar(title: const Text('Каталог')),
       body: Column(
         children: [
-          // D1. Хайлт
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
             child: TextField(
@@ -53,7 +49,6 @@ class _CatalogScreenState extends State<CatalogScreen> {
             ),
           ),
 
-          // D2. Ангиллын шүүлтүүр
           SizedBox(
             height: 48,
             child: ListView(
@@ -73,7 +68,6 @@ class _CatalogScreenState extends State<CatalogScreen> {
             ),
           ),
 
-          // D3. Responsive grid
           Expanded(
             child: visible.isEmpty
                 ? const Center(child: Text('Бараа олдсонгүй'))

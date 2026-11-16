@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Профайл ба тохиргоо. Харанхуй горимын төлөв ShopLiteApp-д хадгалагдана
-/// (lifting state up) — тиймээс утга болон callback-ийг параметрээр авна.
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({
     super.key,

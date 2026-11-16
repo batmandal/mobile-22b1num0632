@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Сагс — 3-р лабораторид Provider-оор бүрэн хэрэгжүүлнэ.
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
 

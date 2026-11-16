@@ -4,7 +4,6 @@ import '../data/sample_products.dart';
 import '../models/product.dart';
 import '../widgets/product_card.dart';
 
-/// Нүүр: баннер ба өндөр үнэлгээтэй барааны хэвтээ жагсаалт.
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key, this.products = sampleProducts});
 

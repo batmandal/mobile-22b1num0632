@@ -1,6 +1,3 @@
-// Лаб 2-ын жишээ өгөгдөл (dummyjson.com-оос авсан бодит бараа).
-// 4-р долоо хоногт энэ жагсаалтыг API-гаас ачаалах өгөгдлөөр солино.
-
 import '../models/product.dart';
 
 const sampleProducts = <Product>[

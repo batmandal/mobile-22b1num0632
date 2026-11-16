@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Аппын өнгө, загвар. Нэг seed өнгөөс Material 3 бүх өнгийг үүсгэнэ.
 class AppTheme {
   AppTheme._();
 

@@ -1,6 +1,3 @@
-// Лаборатори 2 — автомат тест (25). Ажиллуулах: flutter test test/lab2_test.dart
-// Тестийг ӨӨРЧЛӨХГҮЙ байна уу.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shoplite/app.dart';
@@ -13,7 +10,6 @@ import 'package:shoplite/widgets/price_tag.dart';
 import 'package:shoplite/widgets/product_card.dart';
 import 'package:shoplite/widgets/rating_stars.dart';
 
-// Тестэд сүлжээний зураг ашиглахгүй (thumbnail хоосон).
 const phone = Product(
     id: 1, title: 'Phone', price: 100, discountPercentage: 10, rating: 3.5, stock: 5, category: 'smartphones');
 const laptop = Product(id: 2, title: 'Laptop Pro', price: 900, rating: 4.8, stock: 3, category: 'laptops');

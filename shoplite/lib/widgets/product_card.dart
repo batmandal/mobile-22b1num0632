@@ -5,20 +5,6 @@ import 'price_tag.dart';
 import 'product_image.dart';
 import 'rating_stars.dart';
 
-/// Каталогийн нэг барааны карт: зураг, хөнгөлөлтийн шошго, нэр, од, үнэ.
-///
-///   Card(clipBehavior: Clip.antiAlias)
-///   └─ InkWell(onTap)
-///      └─ Column(crossAxisAlignment: stretch)
-///         ├─ Expanded → Stack
-///         │    ├─ Positioned.fill → ProductImage(url: product.thumbnail)
-///         │    ├─ [хөнгөлөлттэй бол] Positioned(top: 8, left: 8) → _Badge('-10%')
-///         │    └─ [нөөц дууссан бол] Positioned.fill → ColoredBox(Colors.black45)
-///         │                                           → Center → _Badge('Дууссан')
-///         └─ Padding(all: 10) → Column(start, spacing: 4)
-///              ├─ Text(title, maxLines: 2, ellipsis, titleSmall)
-///              ├─ RatingStars(rating, size: 14)
-///              └─ PriceTag(product)
 class ProductCard extends StatelessWidget {
   const ProductCard({super.key, required this.product, this.onTap});
 
@@ -89,7 +75,6 @@ class ProductCard extends StatelessWidget {
   }
 }
 
-/// Жижиг өнгөт шошго ("-13%", "Дууссан"). Бэлэн — C2, C3-т ашигла.
 class _Badge extends StatelessWidget {
   const _Badge({required this.label, required this.color, required this.textColor});
 

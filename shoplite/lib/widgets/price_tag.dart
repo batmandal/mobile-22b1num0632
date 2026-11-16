@@ -2,13 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../models/product.dart';
 
-/// B5. Хөнгөлөлттэй үнэ; хөнгөлөлт байвал хуучин үнийг зураастай харуулна.
-///
-///   $54.00  $60.00      ← эхнийх: titleMedium, bold, colorScheme.primary
-///           ‾‾‾‾‾‾      ← хоёрдахь: bodySmall, TextDecoration.lineThrough,
-///                          colorScheme.outline
-///
-/// Хөнгөлөлтгүй (discountPercentage == 0) бол ЗӨВХӨН нэг Text.
 class PriceTag extends StatelessWidget {
   const PriceTag({super.key, required this.product});
 

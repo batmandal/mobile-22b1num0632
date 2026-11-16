@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Сүлжээний зураг. URL хоосон эсвэл ачаалж чадаагүй бол placeholder харуулна.
 class ProductImage extends StatelessWidget {
   const ProductImage({super.key, required this.url, this.fit = BoxFit.cover});
 

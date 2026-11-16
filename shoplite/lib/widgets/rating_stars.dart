@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// B4. Үнэлгээг 5 одоор харуулна: бүтэн ★ (Icons.star), хагас (Icons.star_half),
-/// хоосон ☆ (Icons.star_border). Жишээ: 3.5 → ★★★⯪☆, 4.2 → ★★★★☆.
-/// Одны ард үнэлгээг нэг оронтой бутархайгаар (4.2) labelSmall загвараар бичнэ.
 class RatingStars extends StatelessWidget {
   const RatingStars({super.key, required this.rating, this.size = 16});
 

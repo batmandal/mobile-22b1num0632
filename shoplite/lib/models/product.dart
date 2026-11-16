@@ -1,9 +1,4 @@
-// Даалгавар 2 — Product модель. Энэ классыг ShopLite апп-д 4-р долоо
-// хоногт dummyjson.com API-гаас ирсэн JSON-ийг хөрвүүлэхэд дахин ашиглана.
-
-/// Үнийг `$12.50` хэлбэрээр форматлана.
 extension PriceFormat on double {
-  // TODO 2.6: 2 оронтой бутархайтай, урдаа $ тэмдэгтэй текст буцаа.
   String get asPrice => '\$${toStringAsFixed(2)}';
 }
 
@@ -30,14 +25,7 @@ class Product {
     this.thumbnail = '',
   });
 
-  /// 2.1 JSON Map-аас Product үүсгэнэ.
-  ///
-  /// - id, title, price заавал байна.
-  /// - Тоон утга JSON-д int (25) эсвэл double (25.5) байж болно →
-  ///   `(json['price'] as num).toDouble()`.
-  /// - Бусад талбар байхгүй (null) бол constructor-ийн анхдагч утгыг ав.
   factory Product.fromJson(Map<String, dynamic> json) {
-    // TODO 2.1
     return Product(
       id: (json['id'] as num).toInt(),
       title: json['title'] as String,
@@ -52,9 +40,7 @@ class Product {
     );
   }
 
-  /// 2.2 Product-ийг JSON Map болгоно (fromJson-ийн эсрэг үйлдэл).
   Map<String, dynamic> toJson() {
-    // TODO 2.2
     return {
       'id': id,
       'title': title,
@@ -68,23 +54,16 @@ class Product {
     };
   }
 
-  /// 2.3 Хөнгөлөлт хассан үнэ, 2 оронтой бутархай хүртэл тоймлосон.
-  /// Жишээ: price 100, discountPercentage 12.5 → 87.5
   double get discountedPrice {
-    // TODO 2.3: (x * 100).round() / 100 гэж тоймлож болно.
     final value = price * (1 - discountPercentage / 100);
     return (value * 100).round() / 100;
   }
 
-  /// 2.4 Нөөцөд байгаа эсэх.
   bool get inStock {
-    // TODO 2.4
     return stock > 0;
   }
 
-  /// 2.5 Зарим талбарыг өөрчилсөн ШИНЭ хуулбар буцаана (immutable загвар).
   Product copyWith({double? price, int? stock}) {
-    // TODO 2.5
     return Product(
       id: id,
       title: title,
@@ -98,7 +77,6 @@ class Product {
     );
   }
 
-  // Хоёр Product-ийн id ижил бол тэнцүү гэж үзнэ.
   @override
   bool operator ==(Object other) => other is Product && other.id == id;
 
